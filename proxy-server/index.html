@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost:3332/style.css">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <link rel="stylesheet" href="http://localhost:3000/styles.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.0/dist/semantic.min.css"></link>u
+    <title>UdeYou</title>
+  </head>
+  <body> 
+    <div id='TopSection' ></div>
+    <div id='CourseContent' style="margin-top: 25%; padding-left: 5%" ></div>
+    <div id='Instructors'></div>
+    <div id='Reviews'></div>
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script src="http://localhost:7777/bundle.js"></script>
+    <script src="http://localhost:3000/bundle.js"></script>
+    <script src="http://localhost:3332/bundle.js"></script>
+    <script src="http://localhost:8000/bundle.js"></script>
+    <!-- <script src="https://s3.us-east-2.amazonaws.com/udeyou-topsection/bundle.js"></script> -->
+    <!-- <script src="https://s3.us-east-2.amazonaws.com/hrr-fec-team7-reviews/bundle.js"></script> -->
+    <!-- <script src="https://s3.amazonaws.com/udeyou-mikayla/bundle.js"></script> -->
+    <script>
+      console.log('getElement', document.getElementById('TopSection'));
+      ReactDOM.render(
+        React.createElement(TopSection),
+        document.getElementById('TopSection')
+      ); 
+      // ReactDOM.render(
+      //   React.createElement(CourseContent),
+      //   document.getElementById('CourseContent')
+      // ); 
+      ReactDOM.render(
+        React.createElement(Instructors), 
+        document.getElementById('Instructors') 
+      ); 
+      ReactDOM.render(
+        React.createElement(Reviews), 
+        document.getElementById('Reviews') 
+      ); 
+    </script>
+  </body>
+</html>
